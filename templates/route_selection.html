@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTOA - Sélection d'itinéraire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+    <img src="/img/beams.jpg" alt="" class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+    <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+    <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+      <div class="mx-auto max-w-md">
+        <h1 class="font-bold text-xl">RTOA - Sélection d'itinéraire</h1>
+        <div class="divide-y divide-gray-300/50">
+          <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+            <p>Pour commencer l'enregistrement d'une course, veuillez sélectionner la ligne, le service et l'arrêt de départ desiré.</p>
+            <form action="/start-course" method="post">
+              <div class="mb-2">
+                <label for="line" class="block text-sm font-medium leading-6 text-gray-900">Ligne</label>
+                <div class="mt-2 rounded-md shadow-sm">
+                  <select id="line" name="line" class="h-full rounded-md border-0 bg-transparent w-full py-0 pl-2 pr-5 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                      <option>R380 - Nancy <> Ecuelle</option>
+                      <option>Tempo3 - Essey <> Villès-les-Nancy</option>
+                      <option>10 - Pompey <> Villès-les-Nancy</option>
+                    </select>
+                </div>
+              </div>
+              <div class="mb-2">
+                <label for="service" class="block text-sm font-medium leading-6 text-gray-900">Service</label>
+                <div class="mt-2 rounded-md shadow-sm">
+                  <select id="service" name="service" class="h-full rounded-md border-0 bg-transparent w-full py-0 pl-2 pr-5 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                      <option>S10 - AN LMMeJVS 7h22</option>
+                      <option>S1 - PV/GV LMMeJVS 7h24</option>
+                      <option>S2 - AN LMMeJV 7h32</option>
+                    </select>
+                </div>
+              </div>
+              <div class="mb-2">
+                <label for="departure" class="block text-sm font-medium leading-6 text-gray-900">Départ</label>
+                <div>
+                  <select id="departure" name="departure" class="h-full border-0 bg-transparent w-full py-0 pl-2 pr-5 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm mt-2 rounded-md shadow-sm disabled:bg-slate-200" disabled>
+                      <option>Nancy - République</option>
+                      <option>Nancy - Place Carnot</option>
+                      <option>Malzéville - Gymnase</option>
+                      <option>Malzéville - Gymnase</option>
+                      <option>Eulmont - Poirier</option>
+                    </select>
+                </div>
+              </div>
+              <p class="mt-8" >Tout est prêt ! Pense à activer le départ dès que ton bus arrive...</p>
+              <input type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full" value="C'est parti !">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
